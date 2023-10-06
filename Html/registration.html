@@ -1,113 +1,154 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <title>Super Man</title>
-    <link rel="stylesheet" href="basic.css">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+        <title>Super Man</title>
+        <link rel="stylesheet" href="./css/basic.css">
+        
+        <style>
+            table, tr, td {
+                border:2px solid rgb(0, 0, 0);
+                border-collapse: collapse;
+                background-color : linear-gradient(135deg,rgb(238,238,238) 0%,rgb(169,184,195) 100%);
+                color : black;
+            }
 
-</head>
-<body>
-<header>
-            <a href="#"><img style="height: 50px; width: 80px;"  src="./img/Pet-Health.jpg" alt="logo"></a>
-            <div>+1 234 567 8900</div>
-
+            .back {
+               padding: 40px; 
+               padding-bottom: 190px;
+            }
+            .fm-back{
+                padding: 40px;
+            
+            }
+        </style>
+    </head>
+    <body>
+        <header>
+            <div class="nav">
+                <div>
+                    <a href="#"><img style="height: 50px; width: 80px;"  src="./img/Pet-Health.jpg" alt="logo"></a>
+                </div>
+                <div style="padding-left: 20px;">+1 234 567 8900</div>
+            </div>
+                
+            <nav>
+                
+                
+                <ul>
+                    <li><a href="index.html">Home</a></li>
+                    <li><a href="about_us.html">About Us</a></li>
+                    <li><a href="login_form.html">Sign In</a></li>
+                    <li><a href="registration.html">Sign Up</a></li>
+                    <li><a href="contact_us.html">Contact Us</a></li>
+                </ul>
+            </nav>
+            
         </header>
-    <div style="margin: auto; width: 30%; ; padding: 10px;">
-        <form>
-            <table border="1" cellpadding="10px">
-                <tr>
-                    <th>First Name</th>
-                    <td><input type="text" id="a1" name="b1" placeholder="Enter your first name"></td>
-                </tr>
-                <tr>
-                    <th>Last Name</th>
-                    <td><input type="text" id="a2" name="b2" placeholder="Enter your last name"></td>
-                </tr>
-                <tr>
-                    <th>Email</th>
-                    <td><input type="email" name =b6 placeholder="Enter your email"></td>
-                </tr>
-                <tr>
-                    <th>Date Of Birth</th>
-                    <td><input type="date" name =b6 placeholder="Enter your email"></td>
-                </tr>
-                <tr>
-                    <th>Gender</th>
-                    <td><input type="radio" name="b5" value="male">male<input type="radio" name="b5" value="female">female</td>
-                </tr>
-                <tr>
-                    <th>Phone Number</th>
-                    <td><input type="numeric" name="b7" placeholder="phone no"></td>
-                </tr>
-                <tr>
-                    <th>Language</th>
-                    <td><input type="checkbox">English
-                        <input type="checkbox">Malayalam
-                        <input type="checkbox">Hindi</td>
-                </tr>
-                <tr>
-                    <th>Address</th>
-                    <td><textarea type="text" name="b7" placeholder="Enter your address"></textarea></td>
-                </tr>
-                <tr>
-                    <th>State</th>
-                    <td><select>
-                    <option>-select-</option>
-                    <option>Delhi</option>
-                    <option>Mumbai</option>
-                    <option>Karnataka</option>
-                    <option>Tamil Nadu</option>
-                    <option>Kerala</option>
-                    </select></td>
-                </tr>
-                <tr>
-                    <th>District</th>
-                    <td><select>
-                    <option>-select-</option>
-                    <option>Ernakulam</option>
-                    <option>Kotayam</option>
-                    <option>Idukki</option>
-                    <option>Kannur</option>
-                    <option>Kasargodu</option>
-                    </select></td>
-                </tr>
-                <tr>
-                    <th>Enter your Username</th>
-                    <td><input type="text" id="a4" name="b4" placeholder="Username?"></td>
-                </tr>
-                <tr>
-                    <th>Enter your password</th>
-                    <td><input type="password" id="a4" name="b4" placeholder="Password?"></td>
-                </tr>
-                <tr>
-                    <th>Re-Enter your password</th>
-                    <td><input type="password" id="a5" name="b6" placeholder="Password?"></td>
-                </tr>
-                <tr>
-                    <th colspan="2"><input type="submit" value="Submit"></th>
-    
-                </tr>
-            </table>
-    
-        </form>
-    </div>
+        <div class="back">
+            <div style="margin: auto; width: 50%; ; padding: 10px; background: linear-gradient(135deg,rgb(238,238,238) 0%,rgb(169,184,195) 100%);">
+                <form >
+                    <h2>Register</h2>
+                    <table border="1" cellpadding="10px" align="center" style="width: 70;">
+                        <tr>
+                            <th>First Name</th>
+                            <td><input type="text" id="a1" name="b1" placeholder="Enter your first name"></td>
+                        </tr>
+                        <tr>
+                            <th>Last Name</th>
+                            <td><input type="text" id="a2" name="b2" placeholder="Enter your last name"></td>
+                        </tr>
+                        <tr>
+                            <th>Email</th>
+                            <td><input type="email" name =b6 placeholder="Enter your email"></td>
+                        </tr>
+                        <tr>
+                            <th>Date Of Birth</th>
+                            <td><input type="date" name =b6 placeholder="Enter your email"></td>
+                        </tr>
+                        <tr>
+                            <th>Gender</th>
+                            <td><input type="radio" name="b5" value="male">male<input type="radio" name="b5" value="female">female</td>
+                        </tr>
+                        <tr>
+                            <th>Phone Number</th>
+                            <td><input type="numeric" name="b7" placeholder="phone no"></td>
+                        </tr>
+                        <tr>
+                            <th>Language</th>
+                            <td><input type="checkbox">English
+                                <input type="checkbox">Malayalam
+                                <input type="checkbox">Hindi</td>
+                        </tr>
+                        <tr>
+                            <th>Address</th>
+                            <td><textarea type="text" name="b7" placeholder="Enter your address"></textarea></td>
+                        </tr>
+                        <tr>
+                            <th>State</th>
+                            <td><select>
+                            <option>-select-</option>
+                            <option>Delhi</option>
+                            <option>Mumbai</option>
+                            <option>Karnataka</option>
+                            <option>Tamil Nadu</option>
+                            <option>Kerala</option>
+                            </select></td>
+                        </tr>
+                        <tr>
+                            <th>District</th>
+                            <td><select>
+                            <option>-select-</option>
+                            <option>Ernakulam</option>
+                            <option>Kotayam</option>
+                            <option>Idukki</option>
+                            <option>Kannur</option>
+                            <option>Kasargodu</option>
+                            </select></td>
+                        </tr>
+                        <tr>
+                            <th>Enter your Username</th>
+                            <td><input type="text" id="a4" name="b4" placeholder="Username?"></td>
+                        </tr>
+                        <tr>
+                            <th>Enter your password</th>
+                            <td><input type="password" id="a4" name="b4" placeholder="Password?"></td>
+                        </tr>
+                        <tr>
+                            <th>Re-Enter your password</th>
+                            <td><input type="password" id="a5" name="b6" placeholder="Password?"></td>
+                        </tr>
+                        <tr>
+                            <th colspan="2"><input type="submit" value="Submit"></th>
+            
+                        </tr>
+                    </table>
+            
+                </form>
+            </div>
+        </div>
+        
+        
 
-    <div id="footer">
-            <div class="container">
-                <div class="row">
-                    <div class="col-12">
-                        <div class="social">
-                            <a href="">facebook</a>
-                            <a href="">twitter</a>
-                            <a href="">instagram</a>
+        <div id="footer">
+                <div class="container">
+                    <div class="row">
+                        <div class="col-12">
+                            <div class="social">
+                                <a href=""><li class="fa fa-instagram"></li></a>
+                                <a href=""><li class="fa fa-twitter"></li></a>
+                                <a href=""><li class="fa fa-facebook"></li></a>
+                            </div>
                         </div>
-                    </div>
-                    <div class="col-12">
-                        <p>Copyright &#169; 2045 <a href="">Pets Out</a> All Rights Reserved.</p>
+                        <div class="col-12">
+                            <p>Copyright &#169; 2045 <a href="">Pets Out</a> All Rights Reserved.</p>
 
-						<p>Designed By <a href="#">Deepak</a></p>
+                            <p>Designed By <a href="#">Deepak</a></p>
+                        </div>
                     </div>
                 </div>
             </div>
-        </div>
-</body>
+    </body>
+</html>

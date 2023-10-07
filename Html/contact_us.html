@@ -6,11 +6,12 @@
         <meta name="viewport" content="width=device-width, initial-scale=1">
         <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
         <link rel="stylesheet" href="./css/basic.css">
+        <script src="./js/myJsFile.js"></script>
         <style>
 
             body {font-family: Arial, Helvetica, sans-serif;}
             form {border: 3px solid #f1f1f1;}
-            .container {
+            .container-ct {
             width: 50%;
             padding-right: 15px;
             padding-left: 15px;
@@ -20,7 +21,7 @@
             background-color: #f2f2f2;
             }
 
-            .contact_us {font-family: Arial, Helvetica, sans-serif; margin-top: 50px; margin-bottom: 50px;}
+            .contact_us {font-family: Arial, Helvetica, sans-serif; margin-top: 50px; margin-bottom: 160px;}
             /* * {box-sizing: border-box;} */
 
             input[type=text], select, textarea {
@@ -66,7 +67,7 @@
                     <li><a href="index.html">Home</a></li>
                     <li><a href="about_us.html">About Us</a></li>
                     <li><a href="login_form.html">Sign In</a></li>
-                    <li><a href="registration.html">Sign Up</a></li>
+                    <li><a href="registration_new.html">Sign Up</a></li>
                     <li><a href="contact_us.html">Contact Us</a></li>
                 </ul>
             </nav>
@@ -74,8 +75,8 @@
         </header>
         <!-- Header Section End -->
         <div class="contact_us">
-            <div class="container">
-                <form action="/action_page.php">
+            <div class="container-ct">
+                <form action="#" onsubmit="contactUs()">
                   <label for="fname">First Name</label>
                   <input type="text" id="fname" name="firstname" placeholder="Your name..">
               

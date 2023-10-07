@@ -6,6 +6,7 @@
             <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
         <meta charset="UTF-8">
         <link rel="stylesheet" href="./css/basic.css">
+        <script src="./js/myJsFile.js"></script>
         <style>
             body {font-family: Arial, Helvetica, sans-serif;}
             form {border: 3px solid #f1f1f1;}
@@ -95,24 +96,24 @@
                     <li><a href="index.html">Home</a></li>
                     <li><a href="about_us.html">About Us</a></li>
                     <li><a href="login_form.html">Sign In</a></li>
-                    <li><a href="registration.html">Sign Up</a></li>
+                    <li><a href="registration_new.html">Sign Up</a></li>
                     <li><a href="contact_us.html">Contact Us</a></li>
                 </ul>
             </nav>
             
         </header>
         <div class="container-lg">
-            <form action="/action_page.php" method="post" style="padding-bottom: 50px;">
+            <form action="" onsubmit="LoginformValidation()" method="post" style="padding-bottom: 50px;">
                 <div class="imgcontainer">
                   <img style="height: 100px; width: 80px;" src="./img/man.png" alt="Avatar" class="avatar">
                 </div>
               
                 <div class="container-lg">
                   <label for="uname"><b>Username</b></label>
-                  <input type="text" placeholder="Enter Username" name="uname" required>
+                  <input type="text" placeholder="Enter Username" name="uname" id="uname" onfocus="focusFunction1()" onblur="blurFunction1()" required>
               
                   <label for="psw"><b>Password</b></label>
-                  <input type="password" placeholder="Enter Password" name="psw" required>
+                  <input type="password" placeholder="Enter Password" name="psw" id="pass" onfocus="focusFunction2()" onblur="blurFunction2()"required>
                       
                   <button type="submit">Login</button>
                   <label>
@@ -121,7 +122,7 @@
                 </div>
               
                 <div class="container-lg" style="background-color:#f1f1f1">
-                  <button type="button" class="cancelbtn">Cancel</button>
+                  <button type="button" class="cancelbtn" onClick="window.location.reload()">Cancel</button>
                   <span class="psw">Forgot <a href="#">password?</a></span>
                 </div>
               </form>

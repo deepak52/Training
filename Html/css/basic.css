@@ -1,3 +1,5 @@
+
+
 #nav-title {
     margin-right: auto;
     font-size: 1.5em;
@@ -60,6 +62,13 @@ h3,a,p,h2,img {
   margin-right: -15px;
   margin-left: -15px; }
 
+  .col-12{
+    position: relative;
+  width: 100%;
+  padding-right: 15px;
+  padding-left: 15px;
+  }
+
 
   
 #footer {
@@ -109,4 +118,22 @@ h3,a,p,h2,img {
   .fa-instagram {
     background: #ff4739;
     color: white;
+  }
+
+  input, textarea, select {
+    -webkit-transition: all 0.30s ease-out;
+    -moz-transition: all 0.30s ease-out;
+    -ms-transition: all 0.30s ease-out;
+    -o-transition: all 0.30s ease-out;
+    outline: none;
+    padding: 12px 0px 12px 12px;
+    margin: 20px 4px 10px 0px;
+    border: 1px solid #DDDDDD;
+  }
+   
+  input:focus, textarea:focus, select:focus {
+    box-shadow: 0 0 10px rgba(81, 203, 238, 1);
+    padding: 12px 0px 12px 12px;
+    margin: 20px 4px 12px 0px;
+    border: 1px solid rgba(81, 203, 238, 1);
   }

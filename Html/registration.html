@@ -6,12 +6,13 @@
         <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
         <title>Super Man</title>
         <link rel="stylesheet" href="./css/basic.css">
+        <script src="./js/myJsFile.js"></script>
         
         <style>
             table, tr, td {
                 border:2px solid rgb(0, 0, 0);
                 border-collapse: collapse;
-                background-color : linear-gradient(135deg,rgb(238,238,238) 0%,rgb(169,184,195) 100%);
+                background-color : linear-gradient(to bottom, #33ccff 0%, #ff99cc 100%);;
                 color : black;
             }
 
@@ -48,47 +49,50 @@
             
         </header>
         <div class="back">
-            <div style="margin: auto; width: 50%; ; padding: 10px; background: linear-gradient(135deg,rgb(238,238,238) 0%,rgb(169,184,195) 100%);">
-                <form >
+            <div style="margin: auto; width: 50%; ; padding: 10px; background: linear-gradient(to bottom, #ffffff 0%, #99ccff 100%)">
+                <form action="" name="myForm" method="post" onsubmit="regValidation()">
                     <h2>Register</h2>
+                    
                     <table border="1" cellpadding="10px" align="center" style="width: 70;">
                         <tr>
-                            <th>First Name</th>
-                            <td><input type="text" id="a1" name="b1" placeholder="Enter your first name"></td>
+                            <th><label>First Name</label> </th>
+                            <td><input type="text" id="fname" name="b1"  placeholder="Enter your first name"></td>
                         </tr>
                         <tr>
                             <th>Last Name</th>
-                            <td><input type="text" id="a2" name="b2" placeholder="Enter your last name"></td>
+                            <td><input type="text" id="lname" name="b2" placeholder="Enter your last name"></td>
                         </tr>
                         <tr>
                             <th>Email</th>
-                            <td><input type="email" name =b6 placeholder="Enter your email"></td>
+                            <td><input type="email" id="email" placeholder="Enter your email"></td>
                         </tr>
                         <tr>
                             <th>Date Of Birth</th>
-                            <td><input type="date" name =b6 placeholder="Enter your email"></td>
+                            <td><input type="date" id="dob" placeholder="Enter your email"></td>
                         </tr>
                         <tr>
                             <th>Gender</th>
-                            <td><input type="radio" name="b5" value="male">male<input type="radio" name="b5" value="female">female</td>
+                            <td><input type="radio" id="gndr" placeholder="male">male<input type="radio" id="gndr" placeholder="female">female</td>
                         </tr>
                         <tr>
                             <th>Phone Number</th>
-                            <td><input type="numeric" name="b7" placeholder="phone no"></td>
+                            <td><input type="numeric" id="pno" placeholder="phone no"></td>
                         </tr>
                         <tr>
                             <th>Language</th>
-                            <td><input type="checkbox">English
-                                <input type="checkbox">Malayalam
-                                <input type="checkbox">Hindi</td>
+                            <td><label for="c1"><input type="checkbox" id="c1" placeholder="English">English</label>
+                                <label for="c2"><input type="checkbox" id="c2" placeholder="Malayalam">Malayalam</label>
+                                <label for="c3"><input type="checkbox" id="c3" placeholder="Hindi">Hindi</label>
+                                   
                         </tr>
                         <tr>
                             <th>Address</th>
-                            <td><textarea type="text" name="b7" placeholder="Enter your address"></textarea></td>
+                            <td><textarea type="text" id="addr" placeholder="Enter your address"></textarea></td>
                         </tr>
+
                         <tr>
                             <th>State</th>
-                            <td><select>
+                            <td><select id="state" title="state">
                             <option>-select-</option>
                             <option>Delhi</option>
                             <option>Mumbai</option>
@@ -99,7 +103,7 @@
                         </tr>
                         <tr>
                             <th>District</th>
-                            <td><select>
+                            <td><select id="dist" title="District">
                             <option>-select-</option>
                             <option>Ernakulam</option>
                             <option>Kotayam</option>
@@ -110,18 +114,18 @@
                         </tr>
                         <tr>
                             <th>Enter your Username</th>
-                            <td><input type="text" id="a4" name="b4" placeholder="Username?"></td>
+                            <td><input type="text" id="uname" name="b4" placeholder="Username?"></td>
                         </tr>
                         <tr>
                             <th>Enter your password</th>
-                            <td><input type="password" id="a4" name="b4" placeholder="Password?"></td>
+                            <td><input type="password" id="pass1" name="b4" placeholder="Password?"></td>
                         </tr>
                         <tr>
                             <th>Re-Enter your password</th>
-                            <td><input type="password" id="a5" name="b6" placeholder="Password?"></td>
+                            <td><input type="password" id="pass2" name="b6" placeholder="Password?"></td>
                         </tr>
                         <tr>
-                            <th colspan="2"><input type="submit" value="Submit"></th>
+                            <th colspan="2"><button type="submit" id="btn">submit</button></th>
             
                         </tr>
                     </table>
@@ -137,9 +141,12 @@
                     <div class="row">
                         <div class="col-12">
                             <div class="social">
-                                <a href=""><li class="fa fa-instagram"></li></a>
-                                <a href=""><li class="fa fa-twitter"></li></a>
-                                <a href=""><li class="fa fa-facebook"></li></a>
+                                <ul>
+                                    <a href=""><li class="fa fa-instagram"></li></a>
+                                    <a href=""><li class="fa fa-twitter"></li></a>
+                                    <a href=""><li class="fa fa-facebook"></li></a>
+                                </ul>
+                                
                             </div>
                         </div>
                         <div class="col-12">

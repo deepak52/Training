@@ -4,7 +4,7 @@
         <meta charset="UTF-8">
         <meta name="viewport" content="width=device-width, initial-scale=1">
         <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
-        <title>Super Man</title>
+        <title>PetsOut.in</title>
         <link rel="stylesheet" href="./css/basic.css">
         <link rel="stylesheet" href="./css/reg.css">
         <script src="./js/myJsFile.js"></script>
@@ -19,7 +19,7 @@
                 <div>
                     <a href="#"><img style="height: 50px; width: 80px;"  src="./img/Pet-Health.jpg" alt="logo"></a>
                 </div>
-                <div style="padding-left: 20px;">+1 234 567 8900</div>
+                <div style="padding-left: 20px;">PetsOut.in</div>
             </div>
 
             
@@ -44,57 +44,66 @@
                   <div class="box">
                     <h1>Registration Form</h1>
                     <div class="input-row">
-                        <input type="text" name="name" placeholder="Name*">
+                        <input type="text" name="name" id="name" onfocus="focusFunction3()" onblur="blurFunction3()" placeholder="Name*">
                         <span class="error">Please Enter Your Name</span>
-                      </div>
-                      <div class="input-row">
-                        <input type="text" name="email" placeholder="Email*">
+                    </div>
+
+                    <div class="input-row">
+                        <input type="text" name="email" id="email" onfocus="focusFunction4()" onblur="blurFunction4()" placeholder="Email*">
                         <span class="error">Please Enter Your Email</span>
-                      </div>
-                      <div class="input-row">
-                        <input type="text" name="phone" placeholder="Phone*">
+                    </div>
+
+                    <div class="input-row">
+                        <input type="text" name="phone" id="phone" onfocus="focusFunction5()" onblur="blurFunction5()" placeholder="Phone Number*">
                         <span class="error">Please Enter Your Phone</span>
-                      </div>
-                      <div class="input-row">
-                        <input type="date" name="date" placeholder="Date Of Birth*">
+                    </div>
+
+                    <div class="input-row">
+                        <input type="date" name="date" id="date" onfocus="focusFunction6()" onblur="blurFunction6()" placeholder="Date Of Birth*">
                         <span class="error">Please Enter DOB</span>
-                      </div>
-                      <!-- <div class="input-row">
+                    </div>
+
+                    <!-- <div class="input-row">
                         <input type="radio" name="gender" placeholder="Male*">male<input type="radio" name="gender" placeholder="Female*">female
                         <span class="error">Please Enter Your Gender</span>
-                      </div> -->
+                    </div> -->
                       
-                      <div class="input-row">
-                        <select name="state">
+                    <div class="input-row">
+                        <select name="state" id="state" onfocus="focusFunction7()" onblur="blurFunction7()">
                           <option value="">State*</option>
                           <option value="delhi">Delhi</option>
                           <option value="mumbai">Mumbai</option>
                           <option value="karnataka">Karnataka</option>
                         </select>
                         <span class="error">Please Enter Your State</span>
-                      </div>
-                      <div class="input-row">
-                        <select name="district">
+                    </div>
+
+                    <div class="input-row">
+                        <select name="district" id="district" onfocus="focusFunction8()" onblur="blurFunction8()">
                           <option value="">District*</option>
                           <option value="ernakulam">Ernakulam</option>
                           <option value="kotayam">Kotayam</option>
                           <option value="idukki">Idukki</option>
                         </select>
                         <span class="error">Please Enter Your District</span>
-                      </div>
-                      <div class="input-row">
-                        <input type="text" name="Uname" placeholder="Username*">
+                    </div>
+
+                    <div class="input-row">
+                        <input type="text" name="Uname" id="Uname" onfocus="focusFunction9()" onblur="blurFunction9()" placeholder="Username*">
                         <span class="error">Please Enter Your Username</span>
-                      </div>
-                      <div class="input-row">
-                        <input type="password" name="pass1" placeholder="Password*">
+                    </div>
+
+                    <div class="input-row">
+                        <input type="password" name="pass1" id="pass1" onfocus="focusFunction10()" onblur="blurFunction10()" placeholder="Password*">
                         <span class="error">Please Enter Your Password?</span>
-                      </div>
-                      <div class="input-row">
-                        <input type="password" name="pass2" placeholder="Password*">
+                    </div>
+
+                    <div class="input-row">
+                        <input type="password" name="pass2" id="pass2" onfocus="focusFunction11()" onblur="blurFunction11()" placeholder="Password*">
                         <span class="error">Re-Enter Your Password?</span>
-                      </div>
-                      <input type="submit" value="Submit" name="">
+                    </div>
+
+                    <input type="submit" value="Submit" name="">
                   </div>
                 </form>
             </div>

@@ -31,7 +31,7 @@ function LoginformValidation(){
 }
 
 function focusFunction1() {
-    document.getElementById("uname").style.background = "#adcae6";
+    document.getElementById("uname").style.background = "#B9D9EB";
 }
   
 function blurFunction1() {
@@ -39,118 +39,161 @@ function blurFunction1() {
 }
 
 function focusFunction2() {
-    document.getElementById("pass").style.background = "#adcae6";
+    document.getElementById("pass").style.background = "#B9D9EB";
 }
   
 function blurFunction2() {
     document.getElementById("pass").style.background = "";
 }
 
-// function regValidation(){
-//     console.log("form entered");
-//     let a = document.getElementById("fname").value;
-//     let b = document.getElementById("lname").value;
-//     let c = document.getElementById("email").value;
-//     let d = document.getElementById("dob").value;
-//     let f = document.getElementById("gndr").value;
-//     let g = document.getElementById("pno").value;
-//     let h = document.getElementById("addr").value;
-//     let i = document.getElementById("state").value;
-//     let j = document.getElementById("dist").value;
-//     let k = document.getElementById("uname").value;
-//     let l = document.getElementById("pass1").value;
-//     let m = document.getElementById("pass2").value;
-//     let n = document.getElementById("c1").value;
-//     let o = document.getElementById("c2").value;
-//     let p = document.getElementById("c3").value;
-//     console.log(a,b,c,d,e,f,g,h,i,j,k,l,m);
-//     let rule1 = /^(?=.*[!@#$%^&*-])(?=.*[0-9])(?=.*[A-z]).{8,20}$/;
-    
-//     if(a == ""){
-//         alert("First Name Must NOt Be Empty");
-//     }
-//     else if(b == ""){
-//         alert("Last Name Must NOt Be Empty");
-//     }
-//     else if(c == ""){
-//         alert("Email Must NOt Be Empty");
-//     }  
-//     else if(d == ""){
-//         alert("Date Of Birth Must NOt Be Empty");
-//     }  
-//     else if(f == ""){
-//         alert("Gender Must NOt Be Empty");
-//     } 
-//     else if(g == ""){
-//         alert("Phone Number Must NOt Be Empty");
-//     }
-//     else if(h == ""){
-//         alert("Address Must NOt Be Empty");
-//     }
-//     else if(i == ""){
-//         alert("State Must NOt Be Empty");
-//     }
-//     else if(j == ""){
-//         alert("District Must NOt Be Empty");
-//     } 
-//     else if(k == ""){
-//         alert("Username Must NOt Be Empty");
-//     }
-//     else if(l == ""){
-//         alert("Passwords Must NOt Be Empty");
-//     }
-//     else if(m == ""){
-//         alert("Passwords Must NOt Be Empty");
-//     }
-//     else if(n != "" || o != "" || p != ""){
-//         alert("Check Box Must NOt Be Empty");
-//     }
+function focusFunction3() {
+    document.getElementById("name").style.background = "#B9D9EB";
+}
+  
+function blurFunction3() {
+    document.getElementById("name").style.background = "";
+}
 
-//     else if(l == m){
-//         console.log("match");
-//         result1 = l.match(rule1);
-//     }
+function focusFunction4() {
+    document.getElementById("email").style.background = "#B9D9EB";
+}
+  
+function blurFunction4() {
+    document.getElementById("email").style.background = "";
+}
 
-//     else{
-//         console.log("not match");
-//         alert("Passwords Does not match");
-//     }
+function focusFunction5() {
+    document.getElementById("phone").style.background = "#B9D9EB";
+}
+  
+function blurFunction5() {
+    document.getElementById("phone").style.background = "";
+}
 
-//     if (!result1){
-//         console.log("invalid");
-//         alert("*Password must have a minimum of 8 and maximum of 20 charaters with atleast one upper case and lower case letter, one number and a special character");
-//         flag = true;
-//     }
-    
+function focusFunction6() {
+    document.getElementById("date").style.background = "#B9D9EB";
+}
+  
+function blurFunction6() {
+    document.getElementById("date").style.background = "";
+}
 
-// }
+function focusFunction7() {
+    document.getElementById("state").style.background = "#B9D9EB";
+}
+  
+function blurFunction7() {
+    document.getElementById("state").style.background = "";
+}
+
+function focusFunction8() {
+    document.getElementById("district").style.background = "#B9D9EB";
+}
+  
+function blurFunction8() {
+    document.getElementById("district").style.background = "";
+}
+
+function focusFunction9() {
+    document.getElementById("Uname").style.background = "#B9D9EB";
+}
+  
+function blurFunction9() {
+    document.getElementById("Uname").style.background = "";
+}
+
+function focusFunction10() {
+    document.getElementById("pass1").style.background = "#B9D9EB";
+}
+  
+function blurFunction10() {
+    document.getElementById("pass1").style.background = "";
+}
+
+function focusFunction11() {
+    document.getElementById("pass2").style.background = "#B9D9EB";
+}
+  
+function blurFunction11() {
+    document.getElementById("pass2").style.background = "";
+}
+
+function focusFunction12() {
+    document.getElementById("fname").style.background = "#B9D9EB";
+}
+  
+function blurFunction12() {
+    document.getElementById("fname").style.background = "";
+}
+
+function focusFunction13() {
+    document.getElementById("lname").style.background = "#B9D9EB";
+}
+  
+function blurFunction13() {
+    document.getElementById("lname").style.background = "";
+}
+
+function focusFunction14() {
+    document.getElementById("country").style.background = "#B9D9EB";
+}
+  
+function blurFunction14() {
+    document.getElementById("country").style.background = "";
+}
+
+function focusFunction15() {
+    document.getElementById("subject").style.background = "#B9D9EB";
+}
+  
+function blurFunction15() {
+    document.getElementById("subject").style.background = "";
+}
+
 
 function contactUs(){
-    let a = document.getElementById("fname").value;
-    let b = document.getElementById("lname").value;
-    let c = document.getElementById("country").value;
-    let d = document.getElementById("subject").value;
-    console.log(a,b,c,d);
-    
-    if(a == ""){
-        alert("first name should not be empty");
+    var fname=document.custom_form.fname;
+    var lname=document.custom_form.lname;
+    var country=document.custom_form.country;
+    var subject=document.custom_form.subject;
 
-    }  
-    else if(b == ""){
-        alert("last name should not be empty");
+    //Name validation
+    if (fname.value == "") {
+        fname.nextElementSibling.style.display = "block";
+        fname.style.border = "1px solid #f00";
+        console.log("enter fname")
+        return false
+     }else{
+       fname.nextElementSibling.style.display = "none";
+       fname.style.border = "1px solid transparent";
+     }
+     if (lname.value == "") {
+        lname.nextElementSibling.style.display = "block";
+        lname.style.border = "1px solid #f00";
+        return false
+     }else{
+       lname.nextElementSibling.style.display = "none";
+       lname.style.border = "1px solid transparent";
+     }
+     //country validation
+     if (country.value == "") {
+        country.nextElementSibling.style.display = "block";
+        country.style.border = "1px solid #f00";
+        return false
+     }else{
+       country.nextElementSibling.style.display = "none";
+       country.style.border = "1px solid transparent";
+     }
+     //subject validation
+     if (subject.value == "") {
+         subject.nextElementSibling.style.display = "block";
+         subject.style.border = "1px solid #f00";
+         return false
+      }else{
+        subject.nextElementSibling.style.display = "none";
+        subject.style.border = "1px solid transparent";
+      }
 
-    }  
-    else if(c == ""){
-        alert(" country should not be empty");
-
-    } 
-    else if(d == ""){
-        alert("message should not be empty");
-
-    }
-    else{
-        alert("sucess");
-    }
 }
 
 function FormValidation(){

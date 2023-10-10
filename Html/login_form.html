@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html>
     <head>
-        <title>Login V3</title>
+        <title>PestOut.in</title>
         <meta name="viewport" content="width=device-width, initial-scale=1">
             <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
         <meta charset="UTF-8">
@@ -9,7 +9,14 @@
         <script src="./js/myJsFile.js"></script>
         <style>
             body {font-family: Arial, Helvetica, sans-serif;}
-            form {border: 3px solid #f1f1f1;}
+            form {
+              border: 3px solid #f1f1f1;
+              background: linear-gradient(to bottom, #ffffff 0%, #99ccff 100%);
+              margin-top: 30px;
+              margin-bottom: 150px;
+              margin-left: 100px;
+              width: fit-content;
+            }
             
             input[type=text], input[type=password] {
               width: 100%;
@@ -86,7 +93,7 @@
                 <div>
                     <a href="#"><img style="height: 50px; width: 80px;"  src="./img/Pet-Health.jpg" alt="logo"></a>
                 </div>
-                <div style="padding-left: 20px;">+1 234 567 8900</div>
+                <div style="padding-left: 20px;">PetsOut.in</div>
             </div>
                 
             <nav>
@@ -107,8 +114,13 @@
                 <div class="imgcontainer">
                   <img style="height: 100px; width: 80px;" src="./img/man.png" alt="Avatar" class="avatar">
                 </div>
+                <div class="container-lg">
+                  <h1 style="margin-left: 210px;">Login</h1>
+                </div>
+                
               
                 <div class="container-lg">
+                  
                   <label for="uname"><b>Username</b></label>
                   <input type="text" placeholder="Enter Username" name="uname" id="uname" onfocus="focusFunction1()" onblur="blurFunction1()" required>
               

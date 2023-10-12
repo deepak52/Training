@@ -43,7 +43,7 @@ opacity: 1;
 color: inherit;
 }
 .form_box textarea{ height: 100px; resize: none; }
-.error{
+.registration-error{
     font-weight: 700;
     font-size: 14px;
     color: red;

@@ -39,74 +39,81 @@
         </header>
         
         <div class="back">
-                <form name="custom_form" id="customForm" onsubmit="return FormValidation()" action="valid.html">
-                    
-                  <div class="box">
+            <form name="custom_form" id="customForm" onsubmit="return FormValidation()" action="#">
+                <div class="box">
                     <h1>Registration Form</h1>
+    
                     <div class="input-row">
-                        <input type="text" name="name" id="name" onfocus="focusFunction3()" onblur="blurFunction3()" placeholder="Name*">
-                        <span class="error">Please Enter Your Name</span>
+                        <input type="text" name="name" id="name" onblur="validateField(this, 'name-error')" placeholder="Name*">
+                        <span id="name-error" class="registration-error"></span>
                     </div>
-
+    
                     <div class="input-row">
-                        <input type="text" name="email" id="email" onfocus="focusFunction4()" onblur="blurFunction4()" placeholder="Email*">
-                        <span class="error">Please Enter Your Email</span>
+                        <input type="text" name="email" id="email" onblur="validateEmail(this, 'email-error')" placeholder="Email*">
+                        <span id="email-error" class="registration-error"></span>
                     </div>
-
+    
                     <div class="input-row">
-                        <input type="text" name="phone" id="phone" onfocus="focusFunction5()" onblur="blurFunction5()" placeholder="Phone Number*">
-                        <span class="error">Please Enter Your Phone</span>
+                        <input type="text" name="phone" id="phone" onblur="validatePhoneNumber(this, 'phone-error')" placeholder="Phone Number*">
+                        <span id="phone-error" class="registration-error"></span>
                     </div>
-
+    
                     <div class="input-row">
-                        <input type="date" name="date" id="date" onfocus="focusFunction6()" onblur="blurFunction6()" placeholder="Date Of Birth*">
-                        <span class="error">Please Enter DOB</span>
+                        <input type="date" name="date" id="date" onblur="validateField(this, 'dob-error')" placeholder="Date Of Birth*">
+                        <span id="dob-error" class="registration-error"></span>
                     </div>
-
-                    <!-- <div class="input-row">
-                        <input type="radio" name="gender" placeholder="Male*">male<input type="radio" name="gender" placeholder="Female*">female
-                        <span class="error">Please Enter Your Gender</span>
-                    </div> -->
-                      
+    
                     <div class="input-row">
-                        <select name="state" id="state" onfocus="focusFunction7()" onblur="blurFunction7()">
-                          <option value="">State*</option>
-                          <option value="delhi">Delhi</option>
-                          <option value="mumbai">Mumbai</option>
-                          <option value="karnataka">Karnataka</option>
+                        <select name="gender" id="gndr" onblur="validateSelectField('gndr', 'gender-error')">
+                            <option value="">Gender*</option>
+                            <option value="delhi">Male*</option>
+                            <option value="mumbai">Female*</option>
+                            <option value="karnataka">Others*</option>
                         </select>
-                        <span class="error">Please Enter Your State</span>
+                        <span id="gender-error" class="registration-error"></span>
                     </div>
-
+    
                     <div class="input-row">
-                        <select name="district" id="district" onfocus="focusFunction8()" onblur="blurFunction8()">
-                          <option value="">District*</option>
-                          <option value="ernakulam">Ernakulam</option>
-                          <option value="kotayam">Kotayam</option>
-                          <option value="idukki">Idukki</option>
+                        <select name="state" id="state" onblur="validateSelectField('state', 'state-error')">
+                            <option value="">State*</option>
+                            <option value="delhi">Delhi</option>
+                            <option value="mumbai">Mumbai</option>
+                            <option value="karnataka">Karnataka</option>
                         </select>
-                        <span class="error">Please Enter Your District</span>
+                        <span id="state-error" class="registration-error"></span>
                     </div>
-
+    
                     <div class="input-row">
-                        <input type="text" name="Uname" id="Uname" onfocus="focusFunction9()" onblur="blurFunction9()" placeholder="Username*">
-                        <span class="error">Please Enter Your Username</span>
+                        <select name="district" id="district" onblur="validateSelectField('district', 'district-error')">
+                            <option value="">District*</option>
+                            <option value="ernakulam">Ernakulam</option>
+                            <option value="kotayam">Kotayam</option>
+                            <option value="idukki">Idukki</option>
+                        </select>
+                        <span id="district-error" class="registration-error"></span>
                     </div>
-
+    
                     <div class="input-row">
-                        <input type="password" name="pass1" id="pass1" onfocus="focusFunction10()" onblur="blurFunction10()" placeholder="Password*">
-                        <span class="error">Please Enter Your Password?</span>
+                        <input type="text" name="Uname" id="Uname" onblur="validateField(this, 'uname-error')" placeholder="Username*">
+                        <span id="uname-error" class="registration-error"></span>
                     </div>
-
+    
                     <div class="input-row">
-                        <input type="password" name="pass2" id="pass2" onfocus="focusFunction11()" onblur="blurFunction11()" placeholder="Password*">
-                        <span class="error">Re-Enter Your Password?</span>
+                        <input type="password" name="pass1" id="pass1" onblur="validatePassword('pass1', 'pass2', 'pass-error')" placeholder="Password*">
+                        <span id="pass1-error" class="registration-error"></span>
                     </div>
-
-                    <input type="submit" value="Submit" name="">
-                  </div>
-                </form>
-            </div>
+    
+                    <div class="input-row">
+                        <input type="password" name="pass2" id="pass2" onblur="validatePassword('pass1', 'pass2', 'pass-error')" placeholder="Password*">
+                        <span id="pass-error" class="registration-error"></span>
+                    </div>
+    
+                    <input type="submit" value="Submit">
+                </div>
+            </form>
+        </div>
+    
+        <script src="../Html/js/scriptReg.js"></script>
         
 
         <div id="footer">

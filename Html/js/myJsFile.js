@@ -1,34 +1,6 @@
-function LoginformValidation(){
-    let a = document.getElementById("uname").value;
-    let b = document.getElementById("pass").value;
-    let rule1 = /^(?=.*[!@#$%^&*-])(?=.*[0-9])(?=.*[A-z]).{8,10}$/;
-    result1 = b.match(rule1); 
 
-    console.log(a, b);
-    let z = b.length;
-    console.log("length of password : " + z);
-    let flag = false;
-    if (a == "" && b == ""){
-        console.log("name and password should not be empty");
-        alert("Name And Password Should Not Be Empty");
-        flag = true;
-        
-    }
-    else if (!result1){
-        alert("*Password must have a minimum of 8 and maximum of 10 charaters with atleast one upper case and lower case letter, one number and a special character");
-        flag = true;
-    }
-    else if(a ==""){
-        console.log("name should not be empty");
-        alert("Name Should Not Be Empty");
-        flag = true;
-    }
-    
-    if(!flag){
-        alert("sucess")
-    }
-    
-}
+
+//background focus function
 
 function focusFunction1() {
     document.getElementById("uname").style.background = "#B9D9EB";
@@ -150,6 +122,7 @@ function blurFunction15() {
     document.getElementById("subject").style.background = "";
 }
 
+//contact form validation
 
 function contactUs(){
     var fname=document.custom_form.fname;
@@ -196,107 +169,5 @@ function contactUs(){
 
 }
 
-function FormValidation(){
-    //alert(“Alert”)
-    var name=document.custom_form.name;
-    var email=document.custom_form.email;
-    var phone=document.custom_form.phone;
-    var date=document.custom_form.date
-    // var gender=document.custom_form.gender   
-    var state=document.custom_form.state;
-    var district=document.custom_form.district
-    var Uname=document.custom_form.Uname;
-    var pass1=document.custom_form.pass1;
-    var pass2=document.custom_form.pass2
-    //Name validation
-    if (name.value == "") {
-       name.nextElementSibling.style.display = "block";
-       name.style.border = "1px solid #f00";
-       return false
-    }else{
-      name.nextElementSibling.style.display = "none";
-      name.style.border = "1px solid transparent";
-    }
-    //email validation
-    if (!email.value.match(/^([\w-\.]+@([\w-]+\.)+[\w-]{2,4})?$/) || email.value == "") {
-       email.nextElementSibling.style.display = "block";
-       email.style.border = "1px solid #f00";
-       return false
-    }else{
-      email.nextElementSibling.style.display = "none";
-      email.style.border = "1px solid transparent";
-    }
-    //phone no validation
-    if (!phone.value.match(/\(?([0-9]{3})\)?([ .-]?)([0-9]{3})\2([0-9]{4})/) || phone.value == "") {
-        phone.nextElementSibling.style.display = "block";
-        phone.style.border = "1px solid #f00";
-        return false
-     }else{
-       phone.nextElementSibling.style.display = "none";
-       phone.style.border = "1px solid transparent";
-     }
-    //date of birth validation
-    if (date.value == "") {
-        date.nextElementSibling.style.display = "block";
-        date.style.border = "1px solid #f00";
-        return false
-     }else{
-       date.nextElementSibling.style.display = "none";
-       date.style.border = "1px solid transparent";
-     }
-    // //gender validation
-    // if (gender.value == "") {
-    //     gender.nextElementSibling.style.display = "block";
-    //     gender.style.border = "1px solid #f00";
-    //     return false
-    //  }else{
-    //    gender.nextElementSibling.style.display = "none";
-    //    gender.style.border = "1px solid transparent";
-    //  }
-    
-    //state select box validation
-    if (state.value == "") {
-       state.nextElementSibling.style.display = "block";
-       state.style.border = "1px solid #f00";
-       return false
-    }else{
-      state.nextElementSibling.style.display = "none";
-      state.style.border = "1px solid transparent";
-    }
-    //state select box validation
-    if (district.value == "") {
-        district.nextElementSibling.style.display = "block";
-        district.style.border = "1px solid #f00";
-        return false
-     }else{
-       district.nextElementSibling.style.display = "none";
-       district.style.border = "1px solid transparent";
-     }
-    //Username validation
-    if (Uname.value == "") {
-        Uname.nextElementSibling.style.display = "block";
-        Uname.style.border = "1px solid #f00";
-        return false
-     }else{
-       Uname.nextElementSibling.style.display = "none";
-       Uname.style.border = "1px solid transparent";
-     }
-     //password1 validation
-    if (pass1.value == "") {
-        pass1.nextElementSibling.style.display = "block";
-        pass1.style.border = "1px solid #f00";
-        return false
-     }else{
-       pass1.nextElementSibling.style.display = "none";
-       pass1.style.border = "1px solid transparent";
-     }
-     //Username validation
-    if (pass2.value == "") {
-        pass2.nextElementSibling.style.display = "block";
-        pass2.style.border = "1px solid #f00";
-        return false
-     }else{
-       pass2.nextElementSibling.style.display = "none";
-       pass2.style.border = "1px solid transparent";
-     }
- }
+
+

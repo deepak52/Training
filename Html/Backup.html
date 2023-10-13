@@ -1,0 +1,100 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="utf-8">
+        <title>PetsOut.in</title>
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+        <link rel="stylesheet" href="./css/basic.css">
+        <!-- <link rel="stylesheet" href="./css/reg.css"> -->
+        <link rel="stylesheet" href="./css/cont.css">
+        <script src="./js/myJsFile.js"></script>
+
+    </head>
+    <body>
+        <!-- Header Section Start -->
+        <header>
+            <div class="nav">
+                <div>
+                    <a href="#"><img style="height: 50px; width: 80px;"  src="./img/Pet-Health.jpg" alt="logo"></a>
+                </div>
+                <div style="padding-left: 20px;">PetsOut.in</div>
+            </div>
+                
+            <nav>
+                
+                
+                <ul>
+                    <li><a href="index.html">Home</a></li>
+                    <li><a href="about_us.html">About Us</a></li>
+                    <li><a href="login_form.html">Sign In</a></li>
+                    <li><a href="registration_new.html">Sign Up</a></li>
+                    <li><a href="contact_us.html">Contact Us</a></li>
+                </ul>
+            </nav>
+
+            
+        </header>
+        <!-- Header Section End -->
+
+        <div class="contact_us">
+            <div class="container-ct">
+                <form name="custom_form" id="customForm" onsubmit="return contactUs()" action="#">
+                    <h1>Contact Us</h1>
+                    <div class="input-row">
+                        <label for="fname">First Name</label>
+                        <input type="text" id="fname" name="fname" onblur="capitalizeFirstLetter('fname'); blurFunction('fname', 'error-fname')" placeholder="Your name..">
+                        <span class="error" id="error-fname">Please Enter Your First Name?</span>
+                    </div>
+    
+                    <div class="input-row">
+                        <label for="lname">Last Name</label>
+                        <input type="text" id="lname" name="lname" onblur="capitalizeFirstLetter('lname'); blurFunction('lname', 'error-lname')" placeholder="Your last name..">
+                        <span class="error" id="error-lname">Please Enter Your Last Name?</span>
+                    </div>
+    
+                    <div class="input-row">
+                        <label for="country">Country</label>
+                        <select id="country" name="country" onblur="blurFunction('country', 'error-country')">
+                            <option value="">-Select-</option>
+                            <option value="australia">Australia</option>
+                            <option value="canada">Canada</option>
+                            <option value="usa">USA</option>
+                        </select>
+                        <span class="error" id="error-country">Please Enter Your Country?</span>
+                    </div>
+    
+                    <div class="input-row">
+                        <label for="subject">Subject</label>
+                        <textarea id="subject" name="subject" onblur="capitalizeTextarea('subject'); blurFunction('subject', 'error-subject')" placeholder="Write something.." style="height:200px"></textarea>
+                        <span class="error" id="error-subject">Please Enter Messages?</span>
+                    </div>
+    
+                    <input type="submit" value="Submit">
+                </form>
+            </div>
+        </div>
+
+
+        
+        
+        <div id="footer">
+            <div class="container">
+                <div class="row">
+                    <div class="col-12">
+                        <div class="social">
+                            <a href=""><li class="fa fa-instagram"></li></a>
+                            <a href=""><li class="fa fa-twitter"></li></a>
+                            <a href=""><li class="fa fa-facebook"></li></a>
+                        </div>
+                    </div>
+                    <div class="col-12">
+                        <p>Copyright &#169; 2045 <a href="">Pets Out</a> All Rights Reserved.</p>
+
+                        <p>Designed By <a href="#">Deepak</a></p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </body>
+</html>

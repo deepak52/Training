@@ -27,7 +27,7 @@
                     <li><a href="about_us.html">About Us</a></li>
                     <li><a href="login_form.html">Sign In</a></li>
                     <li><a href="registration_new.html">Sign Up</a></li>
-                    <li><a href="contact_us.html">Contact Us</a></li>
+                    <li><a href="Backup.html">Contact Us</a></li>
                 </ul>
             </nav>
             
@@ -35,21 +35,21 @@
         <div class="container-lg">
             <form action="#" onsubmit="return LoginformValidation();" method="post" style="margin-bottom: 150px;">
                 <div class="imgcontainer">
-                    <img style="height: 100px; width: 80px;" src="./img/man.png" alt="Avatar" class="avatar">
+                    <img class="logo" style="margin: 0 auto;" src="./img/man.png" alt="Avatar" class="avatar">
                 </div>
-                <div class="container-lg">
-                    <h1>Login</h1>
+                <div style="text-align: center;">
+                    <h1 style="margin-bottom: 10px; margin-top: 10px;">Sign In</h1>
                 </div>
     
                 <div class="container-lg">
     
                     <label for="uname"><b>Username</b></label>
-                    <input type="text" placeholder="Enter Username" name="uname" id="uname" onfocus="clearMessages()" onblur="blurFunction1()" required>
-                    <div id="error-username" class="error"></div>
+                    <input type="text" placeholder="Enter Username" name="uname" id="uname" onfocus="clearMessages()" onblur="blurFunction1()" style="margin-top: 11px;" required>
+                    <span id="error-username" class="error"></span>
     
                     <label for="psw"><b>Password</b></label>
-                    <input type="password" placeholder="Enter Password" name="psw" id="pass" onfocus="clearMessages()" onblur="blurFunction2()" required>
-                    <div id="error-password" class="error"></div>
+                    <input type="password" placeholder="Enter Password" name="psw" id="pass" onfocus="clearMessages()" onblur="blurFunction2()" style="margin-top: 11px;" required>
+                    <span id="error-password" class="error"></span>
     
                     <button type="submit" id="button1" disabled>Login</button>
     

@@ -32,7 +32,7 @@
                     <li><a href="about_us.html">About Us</a></li>
                     <li><a href="login_form.html">Sign In</a></li>
                     <li><a href="registration_new.html">Sign Up</a></li>
-                    <li><a href="contact_us.html">Contact Us</a></li>
+                    <li><a href="Backup.html">Contact Us</a></li>
                 </ul>
             </nav>
             
@@ -41,7 +41,7 @@
         <div class="back">
             <form name="custom_form" id="customForm" onsubmit="return FormValidation()" action="#">
                 <div class="box">
-                    <h1>Registration Form</h1>
+                    <h1>Sign Up</h1>
     
                     <div class="input-row">
                         <input type="text" name="name" id="name" onblur="validateField(this, 'name-error')" placeholder="Name*">
@@ -57,11 +57,12 @@
                         <input type="text" name="phone" id="phone" onblur="validatePhoneNumber(this, 'phone-error')" placeholder="Phone Number*">
                         <span id="phone-error" class="registration-error"></span>
                     </div>
-    
+
                     <div class="input-row">
-                        <input type="date" name="date" id="date" onblur="validateField(this, 'dob-error')" placeholder="Date Of Birth*">
+                        <input type="date" min="2005-01-01" name="date" id="date" required>
                         <span id="dob-error" class="registration-error"></span>
                     </div>
+                        
     
                     <div class="input-row">
                         <select name="gender" id="gndr" onblur="validateSelectField('gndr', 'gender-error')">

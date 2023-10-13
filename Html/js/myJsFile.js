@@ -1,173 +1,84 @@
+function blurFunction(inputId, errorId) {
+    const input = document.getElementById(inputId);
+    const error = document.getElementById(errorId);
 
-
-//background focus function
-
-function focusFunction1() {
-    document.getElementById("uname").style.background = "#B9D9EB";
-}
-  
-function blurFunction1() {
-    document.getElementById("uname").style.background = "";
-}
-
-function focusFunction2() {
-    document.getElementById("pass").style.background = "#B9D9EB";
-}
-  
-function blurFunction2() {
-    document.getElementById("pass").style.background = "";
+    if (input.value.trim() === "") {
+        error.style.display = "block";
+    } else {
+        error.style.display = "none";
+    }
 }
 
-function focusFunction3() {
-    document.getElementById("name").style.background = "#B9D9EB";
-}
-  
-function blurFunction3() {
-    document.getElementById("name").style.background = "";
+function capitalizeFirstLetter(inputId) {
+    const input = document.getElementById(inputId);
+    const value = input.value.trim();
+    if (value === "") return;
+
+    const words = value.split(' ');
+    for (let i = 0; i < words.length; i++) {
+        words[i] = words[i].charAt(0).toUpperCase() + words[i].slice(1).toLowerCase();
+    }
+    input.value = words.join(' ');
 }
 
-function focusFunction4() {
-    document.getElementById("email").style.background = "#B9D9EB";
-}
-  
-function blurFunction4() {
-    document.getElementById("email").style.background = "";
-}
+function capitalizeTextarea(inputId) {
+    const textarea = document.getElementById(inputId);
+    let value = textarea.value.trim();
 
-function focusFunction5() {
-    document.getElementById("phone").style.background = "#B9D9EB";
-}
-  
-function blurFunction5() {
-    document.getElementById("phone").style.background = "";
-}
+    if (value === "") return;
 
-function focusFunction6() {
-    document.getElementById("date").style.background = "#B9D9EB";
-}
-  
-function blurFunction6() {
-    document.getElementById("date").style.background = "";
-}
+    // Split the textarea content into sentences
+    const sentences = value.split('. ');
 
-function focusFunction7() {
-    document.getElementById("state").style.background = "#B9D9EB";
-}
-  
-function blurFunction7() {
-    document.getElementById("state").style.background = "";
-}
+    for (let i = 0; i < sentences.length; i++) {
+        // Split each sentence into words
+        const words = sentences[i].split(' ');
 
-function focusFunction8() {
-    document.getElementById("district").style.background = "#B9D9EB";
-}
-  
-function blurFunction8() {
-    document.getElementById("district").style.background = "";
-}
+        for (let j = 0; j < words.length; j++) {
+            if (j === 0) {
+                // Capitalize the first letter of the first word in each sentence
+                words[j] = words[j].charAt(0).toUpperCase() + words[j].slice(1).toLowerCase();
+            } else {
+                words[j] = words[j].toLowerCase();
+            }
+        }
 
-function focusFunction9() {
-    document.getElementById("Uname").style.background = "#B9D9EB";
-}
-  
-function blurFunction9() {
-    document.getElementById("Uname").style.background = "";
-}
+        sentences[i] = words.join(' ');
+    }
 
-function focusFunction10() {
-    document.getElementById("pass1").style.background = "#B9D9EB";
+    // Reassemble the sentences and update the textarea value
+    textarea.value = sentences.join('. ');
 }
-  
-function blurFunction10() {
-    document.getElementById("pass1").style.background = "";
-}
+function contactUs() {
+    const fname = document.getElementById("fname");
+    const lname = document.getElementById("lname");
+    const country = document.getElementById("country");
+    const subject = document.getElementById("subject");
 
-function focusFunction11() {
-    document.getElementById("pass2").style.background = "#B9D9EB";
-}
-  
-function blurFunction11() {
-    document.getElementById("pass2").style.background = "";
-}
+    if (fname.value.trim() === "") {
+        capitalizeFirstLetter("fname");
+        blurFunction('fname', 'error-fname');
+        return false;
+    }
 
-function focusFunction12() {
-    document.getElementById("fname").style.background = "#B9D9EB";
+    if (lname.value.trim() === "") {
+        capitalizeFirstLetter("lname");
+        blurFunction('lname', 'error-lname');
+        return false;
+    }
+
+    if (country.value.trim() === "") {
+        blurFunction('country', 'error-country');
+        return false;
+    }
+
+    if (subject.value.trim() === "") {
+        capitalizeTextarea('subject');
+        blurFunction('subject', 'error-subject');
+        return false;
+    }
+
+    // Additional validation or form submission logic can be added here
+
+    return true;
 }
-  
-function blurFunction12() {
-    document.getElementById("fname").style.background = "";
-}
-
-function focusFunction13() {
-    document.getElementById("lname").style.background = "#B9D9EB";
-}
-  
-function blurFunction13() {
-    document.getElementById("lname").style.background = "";
-}
-
-function focusFunction14() {
-    document.getElementById("country").style.background = "#B9D9EB";
-}
-  
-function blurFunction14() {
-    document.getElementById("country").style.background = "";
-}
-
-function focusFunction15() {
-    document.getElementById("subject").style.background = "#B9D9EB";
-}
-  
-function blurFunction15() {
-    document.getElementById("subject").style.background = "";
-}
-
-//contact form validation
-
-function contactUs(){
-    var fname=document.custom_form.fname;
-    var lname=document.custom_form.lname;
-    var country=document.custom_form.country;
-    var subject=document.custom_form.subject;
-
-    //Name validation
-    if (fname.value == "") {
-        fname.nextElementSibling.style.display = "block";
-        fname.style.border = "1px solid #f00";
-        console.log("enter fname")
-        return false
-     }else{
-       fname.nextElementSibling.style.display = "none";
-       fname.style.border = "1px solid transparent";
-     }
-     if (lname.value == "") {
-        lname.nextElementSibling.style.display = "block";
-        lname.style.border = "1px solid #f00";
-        return false
-     }else{
-       lname.nextElementSibling.style.display = "none";
-       lname.style.border = "1px solid transparent";
-     }
-     //country validation
-     if (country.value == "") {
-        country.nextElementSibling.style.display = "block";
-        country.style.border = "1px solid #f00";
-        return false
-     }else{
-       country.nextElementSibling.style.display = "none";
-       country.style.border = "1px solid transparent";
-     }
-     //subject validation
-     if (subject.value == "") {
-         subject.nextElementSibling.style.display = "block";
-         subject.style.border = "1px solid #f00";
-         return false
-      }else{
-        subject.nextElementSibling.style.display = "none";
-        subject.style.border = "1px solid transparent";
-      }
-
-}
-
-
-

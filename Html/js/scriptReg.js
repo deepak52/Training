@@ -13,7 +13,15 @@ function validateField(field, errorId) {
     } else {
         errorMessage.style.display = "none"; // Hide the error
     }
+
+    if (field.id === 'name') {
+        // Capitalize the first letter of every word when the field is "name"
+        field.value = value.replace(/\b\w/g, function(txt) {
+            return txt.toUpperCase();
+        });
+    }
 }
+
 
 function validateEmail(emailField, errorId) {
     const email = emailField.value.trim();
@@ -40,6 +48,38 @@ function validatePhoneNumber(phoneField, errorId) {
         errorMessage.style.display = "none"; // Hide the error
     }
 }
+
+document.getElementById("date").addEventListener("input", function() {
+    const date = this.value;
+    const errorMessage = document.getElementById("dob-error");
+
+    if (date === "") {
+        errorMessage.textContent = "Date of Birth is required";
+        errorMessage.style.display = "block"; // Show the error
+    } else {
+        const inputDate = new Date(date);
+        const minDate = new Date("2005-01-01");
+
+        if (isNaN(inputDate) || inputDate > minDate) {
+            errorMessage.textContent = "Date must be on or before January 1, 2005";
+            errorMessage.style.display = "block"; // Show the error
+        } else {
+            errorMessage.textContent = ""; // Clear the error message
+            errorMessage.style.display = "none"; // Hide the error
+        }
+    }
+});
+
+// Add a blur event listener to display an error when the field is empty on blur
+document.getElementById("date").addEventListener("blur", function() {
+    const date = this.value;
+    const errorMessage = document.getElementById("dob-error");
+
+    if (date === "") {
+        errorMessage.textContent = "Date of Birth is required";
+        errorMessage.style.display = "block"; // Show the error
+    }
+});
 
 function validatePassword(passId, pass2Id, errorId) {
     const password1 = document.getElementById(passId).value.trim();
@@ -69,6 +109,22 @@ function validateSelectField(fieldId, errorId) {
     }
 }
 
+function capitalizeName(field, errorId) {
+    const errorMessage = document.getElementById(errorId);
+    const value = field.value.trim();
+
+    if (value === "") {
+        errorMessage.textContent = "This field is required";
+        errorMessage.style.display = "block"; // Show the error
+    } else {
+        // Capitalize the first letter of every word
+        field.value = value.replace(/(^\w|\s\w)(\S*)/g, function(txt) {
+            return txt.charAt(0).toUpperCase() + txt.substr(1).toLowerCase();
+        });
+        errorMessage.style.display = "none"; // Hide the error
+    }
+}
+
 function FormValidation() {
     const fieldsToValidate = ["name", "email", "phone", "date", "gndr", "state", "district", "Uname", "pass1", "pass2"];
     let valid = true;
@@ -81,6 +137,8 @@ function FormValidation() {
             validateEmail(element, errorElement);
         } else if (element.id === "phone") {
             validatePhoneNumber(element, errorElement);
+        } else if (element.id === "date") {
+            validateDateOfBirth(element, errorElement);
         } else if (element.id === "gndr" || element.id === "state" || element.id === "district") {
             validateSelectField(element.id, errorElement.id);
         } else {
@@ -98,4 +156,3 @@ function FormValidation() {
 
     return valid;
 }
-
